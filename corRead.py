@@ -1,6 +1,6 @@
 import re
 
-with open("clnPrimeCorpus.txt", "r", encoding="utf-8") as f:
+with open("clnCorpus.txt", "r", encoding="utf-8") as f:
     text = f.read()
 
 lis = re.findall(r"\W+object\W+",text,flags=re.I)
