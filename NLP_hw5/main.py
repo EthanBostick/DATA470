@@ -7,9 +7,6 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 import sys
 import time
 
-#import other files
-from prep import *
-
 #helper functions#
 def iter_encode_chunks(tokenizer, text, chunk_chars=2000):
 	for i in range(0, len(text), chunk_chars):
