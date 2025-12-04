@@ -86,6 +86,6 @@ for ep in range(epochs):
 		loss.backward()
 		optimizer.step()
 
-model.save_pretrained()
-tokenizer.save_pretrained()
+model.save_pretrained("./theTunedModel")
+tokenizer.save_pretrained("./theTunedModel")
 
