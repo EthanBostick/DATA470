@@ -26,7 +26,7 @@ def datanize(encoded,k):
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 batchSize = int(sys.argv[2]) if len(sys.argv)>2 else (2 if device=='cpu' else 16)
 eta = float(sys.argv[3]) if len(sys.argv)>3 else 0.0005
-epochs = int(sys.argv[4]) if len(sys.argv)>4 else 99999999
+epochs = int(sys.argv[4]) if len(sys.argv)>4 else 100
 blockSize = int(sys.argv[5]) if len(sys.argv)>5 else 128
 
 ###################
@@ -86,6 +86,6 @@ for ep in range(epochs):
 		loss.backward()
 		optimizer.step()
 
-model.save_pretrained("./theTunedModel")
-tokenizer.save_pretrained("./theTunedModel")
+model.save_pretrained("./theTunedModel2")
+tokenizer.save_pretrained("./theTunedModel2")
 
